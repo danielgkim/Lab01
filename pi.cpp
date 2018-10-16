@@ -7,8 +7,7 @@ int main(){
   cout.setf(ios::showpoint);
   cout.precision(3);
   while(n>=0){
-    cout<<"Enter the value of the parameter 'n' in the Leibniz formula (or -1 t\
-o quit):";
+    cout<<"Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): "<<endl;
     cin>>n;
     double y;
     for(int i=0; i<n+1; i++)
@@ -17,13 +16,13 @@ o quit):";
 
     }
     y=y*4;
+    if(n==-1)
+    {
+      exit(0);
+    }
   if(n==0)
     {
     cout<<"The approximate value of pi using "<<n+1<<" term is: "<<y<<endl;
-        }
-      if(n==-1)
-        {
-          exit(0);
         }
       else
         {

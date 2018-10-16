@@ -1,15 +1,23 @@
 #include <iostream>
 using namespace std;
+void makeblock(int rows, int columns);
 int main(int argc, char*argv[]){
   int x;
   int y;
-  cout<< "Enter Number of rows and columns";
-  cin >>x>>y;
-  for(int i=0; i<x;i++){
-    for(int j=0; j<y;j++){
-      cout<<"X.";
-    }
-    cout <<endl;
+  do {
+    cout<< "Enter number of rows and columns:"<<endl;
+    cin>>x>>y;
+    makeblock(x,y);
   }
-  return 0;
+  while(x>0);
+}
+
+void makeblock(int rows,int columns){
+  for(int i=1;i<=rows;i++){
+    for(int j=1;j<=columns;j++)
+    {
+      cout <<"X.";
+    }
+    cout<<endl;
+  }
 }
